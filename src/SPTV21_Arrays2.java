@@ -33,17 +33,14 @@ public class SPTV21_Arrays2 {
         System.out.println("========Демонстрация массивов[] []========");
         int arr2[][] = new int[10][10];
         int sum1 = 0;
-        int sum2 = 0;
-        int sum3 = 0;
+
 
         for (int i = 0; i < arr2.length; i++) {
             for (int j = 0; j < arr2[i].length; j++) {
                 arr2[i][j] = random.nextInt(100);
                 if (min > arr2[i][j]) min = arr2[i][j];
                 if (max < arr2[i][j]) max = arr2[i][j];
-                sum1 += i;
-                sum2 += j;
-                sum3 = sum1 + sum2;
+                sum1 += arr2[i][j];
             }
         }
         for (int i = 0; i < arr2.length; i++) {
@@ -55,7 +52,7 @@ public class SPTV21_Arrays2 {
         }
         System.out.println("max = "+max);
         System.out.println("min = "+min);
-        System.out.println("summ = " + sum3);
+        System.out.println("summ = " + sum1);
 
     }
 }
